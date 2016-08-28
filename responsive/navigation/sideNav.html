@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<style>
+
+			.image{
+				min-height:98%;
+				width:98%;
+				margin: 1%;
+				background-image: url("D://flower.jpg");
+				box-shadow: 10px 10px 15px #555;
+				border-radius:8px;
+			}
+			.row::after {
+				content: "";
+				clear: both;
+				display: block;
+}
+			[class*="col-"] {
+				float: left;
+				padding: 15px;
+				border: 1px solid #999;
+			}
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+			@media (max-width:1000px){
+				.leftCol,.rightCol{
+					width:90%;
+				}
+			}
+			.header{
+			background-color:#ca295a;
+			font-weight:bold;
+			font-size:50px;
+			padding:2%;
+			border-radius:5px;
+			min-height:10%;
+			vertical-align:middle;
+			}
+			.para{
+				background-color:#fcd706;
+				border-radius:5px;
+				height:5%;
+				padding:5px;
+				font-family:arial;
+			}
+			.para:hover{
+				background-color:orange;
+				cursor:pointer;
+			
+			}
+			.rightCol{
+			font-family:arial;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		<div class="container row image">
+		<div class="header">What you need in life</div>
+		<div class="leftCol col-3">
+			<p class="para">3 bhk-Home</p>
+			<p class="para">7 digit salary</p>
+			<p class="para">inner peacee</p>
+			<p class="para">Kung-fu</p>
+			<p class="para">Kung-fu</p>
+		</div>
+		<div class="rightCol col-8">
+			<h1 style="text-weight:bold;font-size:50px;">The peace</h1>
+			<p>
+			The example above is fine if the web page only contains two columns.However, we want to use a responsive grid-view with 12 columns, to have more control over the web page.First we must calculate the percentage for one column:
+
+			100% / 12 columns = 8.33%.Then we make one class for each of the 12 columns, class="col-" and a number defining how many columns the section should span:
+			100% / 12 columns = 8.33%.Then we make one class for each of the 12 columns, class="col-" and a number defining how 
+			</p>
+			<p>The example above is fine if the web page only contains two columns.However, we want to use a responsive grid-view with 12 columns, to have </p>
+		</div>
+		</div>
+	</body>
+</html>

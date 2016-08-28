@@ -1,0 +1,222 @@
+<html>
+	<head>
+		<style>
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+		}
+		.clearfix,.clearfix::after,.clearfix::before{
+			content:'';
+			clear:both;
+			display:block;
+		}
+		@media (max-width:1000px){
+			header{
+				display:none;
+			}
+			#burgerMenu{
+				cursor:pointer;
+				font-size:40px;
+				color:white;
+			}
+			#burgerMenu:hover{
+				box-shadow:1px 1px 5px #2E0854;
+			}
+			.burger{
+			background:purple;
+			}
+			.nav{
+				margin-left:-30%;
+				background-color:#420b42;
+				height:100vh;
+				width:30%;
+				color:white;
+				float:left;
+				position:fixed;
+				left:0;
+				top:0;
+			} 
+			.content{
+				float:right;
+			}
+			#toggle:checked ~ .sideBar .nav{
+				display:block;
+				margin-left:0;
+				transition: 150ms ease-in-out;
+			}
+			#toggle:checked ~ .sideBar .burgerMenu{
+				margin-left:30%;
+				
+			}
+			#toggle:checked ~ .content{
+				margin-left:30%;
+				
+			}
+			.nav a{
+				text-decoration:none;
+				list-style:none;
+				color:white;
+				display:block;
+			}
+			input{
+				display:none;
+			}
+			.menuItem{
+				height:50px;
+				line-height:50px;
+				padding:5px;
+				cursor:pointer;
+				border-bottom:2px solid #555;
+			}
+			.menuItem:hover{
+				background-color:purple;
+				color:white;
+			}
+			.closeBtn{
+				font-weight:bold;
+				line-height:50px;
+				margin-right:10px;
+				color:white;
+				cursor:pointer;
+				font-size:40px;
+				padding:10px;
+				transition: 1s ease-in-out;
+			}
+			}
+			@media (min-width:1000px){
+			#fullNav{
+				background-color:#FF00FF;
+				width:100%;
+				position:fixed;
+				top:0;
+				}
+
+			#fullNav a{
+				float:left;
+				height:50px;
+				line-height:50px;
+				text-decoration:none;
+				padding:5px 30px;
+				color:white;
+			}
+			#fullNav a:hover{
+				background-color:#800080;
+			}
+			.sideBar{
+				margin-left:-30%;
+			}
+			input{
+				display:none;
+			}
+			.content{
+				padding:10px;
+				margin-top:50px;
+			}
+			}
+			.content h1{
+				font-weight:bold;
+				text-align:center;
+			}
+			.content p{
+				color:#4a4a4a;
+				font-size:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<header> 
+			<nav id="fullNav" class="clearfix">
+						<a href="#menu1">General</a>
+						<a href="#menu2">Javascript</a>
+						<a href="#menu3">CSS</a>
+			</nav>
+		</header>
+		<input type="checkbox" id="toggle">
+		<div class="sideBar">		
+			<div class="burger"><label for="toggle" id="burgerMenu">&#9776;</label></div>
+			<nav class="nav">
+					<label for="toggle" class="closeBtn">X</label>
+					<a class="menuItem" href="#menu1">General</a>
+					<a class="menuItem" href="#menu2">Javascript</a>
+					<a class="menuItem" href="#menu3">CSS</a>
+				</ul>
+			</nav>
+		</div>
+		<div class="content">
+			<p id="menu1" ><h1>PollyFills</h1>
+			
+			<p>In web development, a polyfill is code that implements a feature on web browsers that do not support the feature. Most often, it refers to a JavaScript library that implements an HTML5 web standard, either an established standard (supported by some browsers) on older browsers, or a proposed standard (not supported by any browsers) on existing browsers. Formally, "a polyfill is a shim for a browser API".[1]
+
+			Polyfills allow web developers to use an API regardless of whether it is supported by a browser or not, and usually with minimal overhead. Typically they first check if a browser supports an API, and use it if available, otherwise using their own implementation.[1][2] Polyfills themselves use other, more supported features, and thus different polyfills may be needed for different browsers. The term is also used as a verb: polyfilling is providing a polyfill for a feature.
+			</p>
+			</br>
+			<h2>Shims</h2> 
+			<p>
+			In computer programming, a shim is a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere.[1][2] Shims can be used to support an old API in a newer environment, or a new API in an older environment. Shims can also be used for running programs on different software platforms than they were developed for.
+
+			Shims for older APIs typically come about when the behavior of an API changes, thereby causing compatibility issues for older applications which still rely on the older functionality; in such cases, the older API can still be supported by a thin compatibility layer on top of the newer code. Shims for newer APIs are defined as: "a shim is a library that brings a new API to an older environment, using only the means of that environment
+			</p>
+			</br>
+			<h1>Graceful degradation and progressive enhancement</h1>
+			</br>
+			<h2>Graceful Degradation</h2>
+			<p>Graceful degradation is one solution. It is the practice of building a web site or application so it provides a good level of user experience in modern browsers. However, it will degrade gracefully for those using older browsers. The system may not be as pleasant or as pretty, but the basic functionality will work on older systems.
+
+			A simple example is the use of 24-bit alpha-transparent PNGs. Those images can be displayed on modern browsers without problems. IE5.5 and IE6 would show the image, but transparency effects would fail (it can be made to work if necessary). Older browsers that do not support PNG would show alt text or an empty space.
+
+			Developers adopting graceful degradation often specify their browser support level, e.g. level 1 browsers (best experience) and level 2 browsers (degraded experience).
+			</p>
+
+			<h2>Progressive Enhancement</h2>
+			<p>
+			Progressive enhancement is similar concept to graceful degradation but in reverse. The web site or application would establish a base-level of user experience for most browsers. More advanced functionality would then be added when a browser supports it.
+
+			Progressive enhancement does not require us to select supported browsers or revert to table-based layouts. We choose a level of technology; i.e. the browser must support HTML 4.01 and standard page request/responses.
+
+			Going back to our image example, we might decide that our application should be functional in all graphical browsers. We could use a lower-quality GIF images by default but replace them with 24-bit PNGs when the browser supports them.
+			</p>
+			</p>
+			
+			
+
+
+
+</br></br></br>
+
+		<p id="menu2"><h1>Javascript</h1>JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications. It is complimentary to and integrated with Java. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.
+
+Audience
+This tutorial has been prepared for JavaScript beginners to help them understand the basic functionality of JavaScript to build dynamic web pages and web applications.
+
+Prerequisites
+For this tutorial, it is assumed that the reader have a prior knowledge of HTML coding. It would help if the reader had some prior exposure to object-oriented programming concepts and a general idea on creating online applications.</p>
+</br></br></br>
+
+		<p id="menu3"><h1>CSS</h1>What is CSS?
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+CSS Demo - One HTML Page - Multiple Styles!
+Here we will show one HTML page displayed with four different stylesheets. Click on the "Stylesheet 1", "Stylesheet 2", "Stylesheet 3", "Stylesheet 4" links below to see the different styles:Why Use CSS?
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. 
+
+CSS Solved a Big Problem
+HTML was NEVER intended to contain tags for formatting a web page!
+
+HTML was created to describe the content of a web page, like:
+
+<h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+
+When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+
+To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+
+CSS removed the style formatting from the HTML page!</p>
+
+</div>
+		</body>
+</html>

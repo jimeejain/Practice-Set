@@ -1,0 +1,223 @@
+<html>
+	<head>
+		<style>
+		*{
+			padding:0;
+			margin:0;
+			border:0;
+		}
+		body{
+			background-image:url("./this/wall.jpg");
+			background-repeat:no-repeat;
+			background-size:cover;
+			overflow-x: hidden;
+		}
+		/*CSS for menu bar*/
+		ul,li{
+			list-style-type: none;
+		}
+
+		.main-menu{
+			height: 50px;
+			background-color: #e45252;
+			color:#FFF;
+			box-shadow:0px 5px 10px #a55454;
+		}
+		.main-menu::after{
+			display: block;
+			clear: both;
+			content:'';
+		}
+		.menu-item-container{
+			display: block;
+			height: 100%;
+			float: left;
+			padding:0 20px;
+			position: relative;
+		}
+
+		.menu-item-link::before{
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			content: ' ';
+		}
+		.menu-item-link{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			text-decoration:none;
+			color:white;
+			cursor:pointer;
+		}
+		.menu-item-container:hover{
+			background-color: #c54747;
+			color:#333;
+		}
+
+		.sub-menu{
+			position: absolute;
+			top:100%;
+			left: 0px;			
+			display: none;
+			background-color: #ea6565;
+			width:200%;
+		}
+		.sub-menu .menu-item-container{
+			float: none;
+			height: 50px;
+			
+		}
+		.menu-item-container:hover > .sub-menu{
+			display: block;
+		}
+		.content{
+			margin-top:30px;
+		}
+		.heading,.subHeading,.list{
+			text-align:center;
+			font-size:40px;
+		}
+		.subHeading{
+			margin-top:30px;
+			font-size:30px;
+			color:#c54747;
+		}
+		.list{
+			margin-top:30px;
+			font-size:25px;
+			list-style:
+		}
+		ol li{
+			margin:10px;
+		}
+		.list > li{
+			color:#a55454;
+		}
+		ol li ol{
+			font-size:20px;
+			color:orange;
+		}
+	
+		.first{
+			position:relative;
+			-webkit-animation-name: example; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+			-webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+			animation-name: exampleFirst;
+			animation-duration: 500ms;
+			animation-iteration-count: 1;
+		}
+		@-webkit-keyframes exampleFirst {
+			0%   {left:-600px; }
+			100% {left:0; }
+		}
+		.second{
+			position:relative;
+			-webkit-animation-name: example; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+			-webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+			animation-name: exampleSecond;
+			animation-duration: 500ms;
+			animation-iteration-count: 1;
+		}
+		@-webkit-keyframes exampleSecond {
+			0%   {bottom:-600px;}
+			100% {bottom:0; }
+		}
+		.third{
+			position:relative;
+			-webkit-animation-name: example; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+			-webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+			animation-name: exampleThird;
+			animation-duration: 500ms;
+			animation-iteration-count: 1;
+		}
+		@-webkit-keyframes exampleThird {
+			0%   {right:-600px;}
+			100% {right:0; }
+		}
+		.webImage{
+			background:url("./this/webMen.png");
+			background-repeat:no-repeat;
+			width:100%;
+			height:300px;
+			position:relative;
+			animation: mymove 10s infinite;
+			animation-timing-function: linear;
+		}
+		
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 100%;}
+    to {left: -70%;}
+}
+		</style>
+	</head>
+	<body>	
+		<ul class="main-menu">
+			<li class="menu-item-container">
+				<span class="menu-item-link first" >Day One</span>
+				<ul class="sub-menu">
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/content/easyShop.html" target="_blank">EasyShop</a>
+					</li>
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/content/signUp.html" target="_blank">SignUp Page</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item-container">
+				<span class="menu-item-link second" >Day Two</span>
+				<ul class="sub-menu">
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/navigation/toggleMenu.html" target="_blank">Toggle Menu</a>
+					</li>
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/navigation/dropDownNav.html" target="_blank">Select Menu</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item-container">
+				<span class="menu-item-link third" >Day Three</span>
+				<ul class="sub-menu">
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/content/Responsive form.html" target="_blank">Responsive form</a>
+					</li>
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/content/responsiveTable.html" target="_blank">Responsive Table</a>
+					</li>
+					<li class="menu-item-container">
+						<a class="menu-item-link" href="./responsive/content/flexProp.html" target="_blank">Flex Property</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		
+		<div class="content">
+			<h1 class="heading">Welcome to RWD session details</h1>
+			
+			<p class="subHeading">Following are the topics covered in the session -</p>
+			
+			<ol class="list">
+				<li> Different Layouts
+					<ol>
+						<li>Fluid Layout</li>
+						<li>Mostly Fluid Layout</li>
+						<li>Fixed Layout</li>
+					</ol>
+				</li>
+				
+				<li>Media Queries</li>
+				<li>CSS Properties</li>
+				<li>Performance</li>
+				<li>Bootstrap</li>
+			</ol>
+		</div>
+		<div class="webImage"></div>
+	</body>
+</html>

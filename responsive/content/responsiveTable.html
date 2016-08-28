@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			table{
+				width:100%;
+				border-collapse:collapse;
+				}
+			tr:nth-of-type(odd){
+				background:#eee;
+			}
+			th{
+				background:grey;
+				color:white;
+				font-weight:bold;
+			}
+			td,th{
+				padding:6px;
+				border:1px solid #ccc;
+				text-align:left;
+			}
+			@media only screen and (max-width:600px){
+				td{
+					display:block;
+				}
+				#head{
+					display:none;
+				}
+				tr{
+					border:1px solid #ccc;
+				}
+				td{
+					border:none;
+					padding-left:50%;
+				}
+				td:nth-child(1):before{
+					content:"first name";
+				}
+				td:nth-child(2):before{
+					content:"last name";
+				}
+				td:nth-child(3):before{
+					content:"job";
+				}
+				td:nth-child(4):before{
+					content:"job level";
+				}
+				td:nth-child(5):before{
+					content:"experience";
+				}
+				td:nth-child(6):before{
+					content:"contact number";
+				}
+				td:nth-child(7):before{
+					content:"Dob";
+				}
+				td:nth-child(8):before{
+					content:"location";
+				}
+				td:before{
+					position:absolute;
+					left:6px;
+					width:45%;
+				}
+		</style>
+	</head>
+		<body>
+			<div id="page">
+				<h2>Responsive table</h2>
+				<table class="table">
+					<thead id="head">
+						<tr>
+							<th>First name</th>
+							<th>Last name</th>
+							<th>job</th>
+							<th>job level</th>
+							<th>experience</th>
+							<th>contact number</th>
+							<th>Dob</th>
+							<th>location</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>james</td>
+							<td>mat</td>
+							<td>manager</td>
+							<td>6</td>
+							<td>7</td>
+							<td>12345</td>
+							<td>january 13</td>
+							<td>mysore</td>
+						</tr>
+						<tr>
+							<td>jimee</td>
+							<td>jain</td>
+							<td>sse</td>
+							<td>2</td>
+							<td>7</td>
+							<td>12345</td>
+							<td>january 13</td>
+							<td>mysore</td>
+						</tr>
+						<tr>
+							<td>sujit</td>
+							<td>jaiswal</td>
+							<td>manager</td>
+							<td>6</td>
+							<td>7</td>
+							<td>12345</td>
+							<td>january 13</td>
+							<td>mysore</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</body>
+	
+</html>

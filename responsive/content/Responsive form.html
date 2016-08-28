@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<style>
+			*{
+				padding:0;
+				border:0;
+			}
+			
+			body{
+					padding: 5%;
+					background-color:purple;
+					
+				}
+			@media (max-width:700px){
+				input{
+					width:100%;
+					border:2px solid green;
+					color:green;
+					height:50px;
+					margin-top:20px;
+					margin-bottom:20px;
+					background:green;
+					margin-left: 1px;
+					
+				}
+				.float{
+					float:left;
+					width:100%;
+				}
+				button{
+					width:60%;
+					margin-left:20%;
+					height:50px;
+					border:2px solid green;
+				}
+			}
+			@media (min-width:701px) and (max-width:999px){
+				input{
+					width:100%;
+					border:2px solid green;
+					color:green;
+					height:50px;
+					margin-top:20px;
+					margin-bottom:20px;
+					
+				}
+				.float{
+					float:left;
+					width:46%;
+					margin-left:2%;
+				}
+				.lastForSmall{
+					width:96%;
+				}
+				button{
+					width:96%;
+					height:50px;					
+					margin-left:2%;
+					border:2px solid green;
+				}
+			}
+			@media (min-width:1000px){
+				
+				
+				input{
+					width:300px;
+					border:2px solid green;
+					color:green;
+					height:50px;
+					margin-top:20px;
+					margin-bottom:20px;
+					margin-left: 10px;
+					
+				}
+				.float{
+					float:left;
+					width:30%;
+					
+				}
+				button{
+					width:60%;
+					margin-left:20%;
+					height:50px;
+					border:2px solid green;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="float">
+			<div>Name</div>
+			<input type="text" placeholder="name" class="input">
+		
+			
+		<div>Contact Number</div>
+		<input type="text" placeholder="name" class="input">
+		
+		<div>Working company</div>
+		<input type="text" placeholder="name" class="input">
+		</div>
+		
+		<div class="float">
+		<div>Email</div>
+		<input type="text" placeholder="name" class="input">
+	
+		<div>Certifications</div>
+		<input type="text" placeholder="name" class="input">
+		
+		<div>Location</div>
+		<input type="text" placeholder="name" class="input">
+		</div>
+		
+		<div class="float lastForSmall">
+		<div>Biography</div>
+		<input type="text" placeholder="name" class="input">
+		
+		
+		<div>Comments</div>
+		<input type="text" placeholder="name" class="input">
+		
+		<div>Country</div>
+		<input type="text" placeholder="name" class="input">
+		</div>
+		
+		<button type="button">SUBMIT</button>
+		
+	</body>
+</html>

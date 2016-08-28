@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<style>
+			.parent{
+				border:5px solid red;
+			}
+			
+			.item{
+				margin:5px;
+				background:DeepSkyBlue;
+				color:white;
+				text-align:center;
+				line-height:50px;
+				font-weight:bold;
+			}
+			
+			.example-flex .item{
+				width:50px;
+			}
+			
+			.example-direction .parent{
+					display:flex;
+					flex-direction:col-reverse;
+				}
+				
+			.example-direction .item{
+				width:1000px;
+			}
+		</style>
+		<h1 style="text-align:center">Understanding flex basics</h1>
+		<body>
+			<div class="example">
+				<div class="example-content">
+					<h2>normal divs within divs</h2>
+					<div class="parent">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="example example-flex">
+				<h2>Dispaly:flex</h2>
+				<div class="example-content">
+					<div class="parent">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="example example-direction">
+				<h2>row reverse</h2>
+				<div class="example-content">
+					<div class="parent">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+					</div>
+				</div>
+				
+			</div>
+		</body>
+	</head>
+</html>

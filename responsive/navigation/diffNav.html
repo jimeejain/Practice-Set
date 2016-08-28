@@ -1,0 +1,242 @@
+<html>
+	<head>
+		<style>
+			* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+}
+
+.container {
+	padding: 0 5%;
+}
+
+#content {
+	float: right;
+	width: 100%;
+	margin: 3em 0 0 0;
+}
+
+#sidebar a {
+	text-decoration: none;
+	display: block;
+}
+
+#panel-nav {
+	float: right;
+}
+
+.btn {
+	background: #999;
+}
+
+.btn:hover {
+	background-color: #7b7776;
+}
+
+#toggle-1,#toggle-2,#toggle-3 {
+	position: absolute;
+	left: -100px;
+}
+
+.inner {
+	width: 300%;
+	transition: margin 0.5s;
+}
+
+nav {
+	float: left;
+	background: #3b3736;
+	width: 33.334%;
+}
+
+#nav {
+	list-style: none;
+	border-top: 1px solid #777777;
+}
+
+#nav a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	height: 20px;
+	padding: 10%;
+	border-bottom: 1px solid #777777;
+}
+
+#nav a:hover {
+	background: #4b4746;
+}
+
+.main-content {
+	float: left;
+	width: 33.333%;
+}
+
+#sidebar {
+	float: left;
+	padding: 0 2%;
+	width: 33.333%;
+}
+
+#toggle-1:checked     ~ .inner{
+	margin-left: 0%;
+}
+
+#toggle-2:checked     ~ .inner{
+	margin-left: -100%;            
+/*Positive margin moves content to the right while negetive margin move content to the left, try giving values 100%,50% or -50%*/ 
+}
+
+#toggle-3:checked    ~ .inner {
+	 margin-left: -200%; 
+}
+
+header {
+	padding-bottom: 30px;
+	text-align: center;
+	background: #2b2726;
+}
+
+/* ----------- media queries --------------------- */
+@media screen and (min-width: 550px) {
+	header {
+		padding-bottom: 60px;
+	}
+	.inner {
+		width: 150%;
+		margin-left: 0;
+	}
+	#panel-nav {
+		margin: 1.75em 3.25% 0 0;
+	}
+	#panel-nav .btn {
+		padding: 0.45em 0.9em;
+	}
+	.btn-2 {
+		display: none;
+	}
+	nav {
+		width: 25%;
+		background: none;
+	}
+	#nav {
+		margin: 20px 20px;
+	}
+	#nav a {
+		background: none;
+		color: #006;
+		line-height: 1em;
+		height: 2.5em;
+		padding-left: 0;
+	}
+	.main-content {
+		width: 40%;
+	}
+	#content {
+		width: 100%;
+	}
+	#sidebar {
+		width: 25%;
+		margin-top: 3em;
+	}
+	#toggle-1:checked    ~ .inner {
+		margin-left: 0%;
+	}
+	#toggle-2:checked    ~ .inner {
+		margin-left: 0%;
+		transition: 0;
+	}
+	#toggle-3:checked    ~ .inner {
+		margin-left: -37%;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	.inner {
+		width: 100%;
+		transition: 0;
+	}
+	.btn {
+		display: none;
+	}
+	.logo {
+		margin-left: 2%;
+	}
+	nav {
+		width: 20%;
+	}
+	.main-content {
+		width: 53%;
+		padding: 0 2% 0 0;
+	}
+	#sidebar {
+		width: 23%;
+		padding: 0 1%;
+	}
+	#toggle-3:checked    ~ .inner {
+		margin-left: 0%;
+	}
+}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="panel-nav">
+					<label class="btn btn-1" for="toggle-1">Menu</label>
+					<label class="btn btn-2" for="toggle-2">Content</label>
+					<label class="btn btn-3" for="toggle-3">More</label>
+				</div>
+			</div>	
+		</header>
+		<input id="toggle-1" name="panel" type="radio"/>
+        <input id="toggle-2" name="panel" type="radio"/>
+        <input id="toggle-3" name="panel" type="radio"/>
+		
+		<div class="inner">
+			<nav>
+				<ul id="nav">
+					<li>
+						<a href="#">Link1</a>
+					</li>
+					<li>
+						<a href="#">Link2</a>
+					</li>
+					<li>
+						<a href="#">Link3</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="container main-content">
+				<div id="content">
+					<h2>Off canvas panel pattern</h2>
+					hey this is jimee jain hey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jainhey this is jimee jain
+				</div>
+			</div>
+			<div id="sideBar">
+				<h2>Additional Resources</h2>
+				<ul>
+					<li>
+						<a href="#">Fluid grids</a>
+					</li>
+					<li>
+						<a href="#">Fluid images</a>
+					</li>
+					<li>
+						<a href="#">media-queries</a>
+					</li>
+					<li>
+						<a href="#">Responsive navigation</a>
+					</li>
+					
+					
+				</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>	
